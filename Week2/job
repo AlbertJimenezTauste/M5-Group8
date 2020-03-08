@@ -6,3 +6,4 @@
 #SBATCH -o %x_%u_%j.out # File to which STDOUT will be written
 #SBATCH -e %x_%u_%j.err # File to which STDERR will be written
 python detectron2_KITTI.py -p mhigh
+#python -m detectron2.utils.collect_env

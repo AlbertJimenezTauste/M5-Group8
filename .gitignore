@@ -1,0 +1,2 @@
+# Don't upload model files as they are too big
+*.pth
