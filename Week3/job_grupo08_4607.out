@@ -1,0 +1,109 @@
+Metadata(name='KITTI_MOTS_train', thing_classes=['None', 'Car', 'Pedestrian'])
+Loading sequence 0000
+Loading sequence 0001
+Loading sequence 0003
+Loading sequence 0004
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+Loading sequence 0012
+Loading sequence 0015
+Loading sequence 0017
+Loading sequence 0019
+Loading sequence 0020
+0000
+0001
+0003
+0004
+0005
+0009
+0011
+0012
+0015
+0017
+0019
+0020
+Loaded 5007 images!
+[5m[31mWARNING[0m [32m[03/15 13:55:59 d2.evaluation.coco_evaluation]: [0mjson_file was not found in MetaDataCatalog for 'KITTI_MOTS_val'. Trying to convert it to COCO format ...
+[32m[03/15 13:55:59 d2.data.datasets.coco]: [0mConverting dataset annotations in 'KITTI_MOTS_val' to COCO format ...)
+Loading sequence 0002
+Loading sequence 0006
+Loading sequence 0007
+Loading sequence 0008
+Loading sequence 0010
+Loading sequence 0013
+Loading sequence 0014
+Loading sequence 0016
+Loading sequence 0018
+0002
+0006
+0007
+0008
+0010
+0013
+0014
+0016
+0018
+Loaded 2920 images!
+[32m[03/15 13:56:21 d2.data.datasets.coco]: [0mConverting dataset dicts into COCO format
+[32m[03/15 13:56:26 d2.data.datasets.coco]: [0mConversion finished, num images: 2920, num annotations: 11376
+[32m[03/15 13:56:26 d2.data.datasets.coco]: [0mCaching annotations in COCO format: ./output/KITTI_MOTS_val_coco_format.json
+Loading sequence 0002
+Loading sequence 0006
+Loading sequence 0007
+Loading sequence 0008
+Loading sequence 0010
+Loading sequence 0013
+Loading sequence 0014
+Loading sequence 0016
+Loading sequence 0018
+0002
+0006
+0007
+0008
+0010
+0013
+0014
+0016
+0018
+Loaded 2920 images!
+[32m[03/15 13:56:49 d2.data.build]: [0mDistribution of instances among all 3 categories:
+[36m|  category  | #instances   |  category  | #instances   |  category  | #instances   |
+|:----------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    None    | 0            |    Car     | 8029         | Pedestrian | 3347         |
+|            |              |            |              |            |              |
+|   total    | 11376        |            |              |            |              |[0m
+[32m[03/15 13:56:49 d2.data.common]: [0mSerializing 2920 elements to byte tensors and concatenating them all ...
+[32m[03/15 13:56:49 d2.data.common]: [0mSerialized dataset takes 1.86 MiB
+[32m[03/15 13:56:49 d2.evaluation.evaluator]: [0mStart inference on 2920 images
+[32m[03/15 13:56:50 d2.evaluation.evaluator]: [0mInference done 11/2920. 0.0780 s / img. ETA=0:03:49
+[32m[03/15 13:56:55 d2.evaluation.evaluator]: [0mInference done 74/2920. 0.0783 s / img. ETA=0:03:46
+[32m[03/15 13:57:01 d2.evaluation.evaluator]: [0mInference done 136/2920. 0.0788 s / img. ETA=0:03:42
+[32m[03/15 13:57:06 d2.evaluation.evaluator]: [0mInference done 187/2920. 0.0848 s / img. ETA=0:03:55
+[32m[03/15 13:57:11 d2.evaluation.evaluator]: [0mInference done 243/2920. 0.0875 s / img. ETA=0:03:57
+[32m[03/15 13:57:16 d2.evaluation.evaluator]: [0mInference done 304/2920. 0.0863 s / img. ETA=0:03:48
+[32m[03/15 13:57:21 d2.evaluation.evaluator]: [0mInference done 367/2920. 0.0851 s / img. ETA=0:03:40
+[32m[03/15 13:57:26 d2.evaluation.evaluator]: [0mInference done 430/2920. 0.0842 s / img. ETA=0:03:32
+[32m[03/15 13:57:31 d2.evaluation.evaluator]: [0mInference done 493/2920. 0.0836 s / img. ETA=0:03:25
+[32m[03/15 13:57:36 d2.evaluation.evaluator]: [0mInference done 555/2920. 0.0832 s / img. ETA=0:03:19
+[32m[03/15 13:57:41 d2.evaluation.evaluator]: [0mInference done 617/2920. 0.0828 s / img. ETA=0:03:13
+[32m[03/15 13:57:47 d2.evaluation.evaluator]: [0mInference done 679/2920. 0.0826 s / img. ETA=0:03:07
+[32m[03/15 13:57:52 d2.evaluation.evaluator]: [0mInference done 741/2920. 0.0824 s / img. ETA=0:03:02
+[32m[03/15 13:57:57 d2.evaluation.evaluator]: [0mInference done 801/2920. 0.0824 s / img. ETA=0:02:57
+[32m[03/15 13:58:02 d2.evaluation.evaluator]: [0mInference done 862/2920. 0.0823 s / img. ETA=0:02:51
+[32m[03/15 13:58:07 d2.evaluation.evaluator]: [0mInference done 923/2920. 0.0822 s / img. ETA=0:02:46
+[32m[03/15 13:58:12 d2.evaluation.evaluator]: [0mInference done 984/2920. 0.0822 s / img. ETA=0:02:41
+[32m[03/15 13:58:17 d2.evaluation.evaluator]: [0mInference done 1046/2920. 0.0821 s / img. ETA=0:02:35
+[32m[03/15 13:58:22 d2.evaluation.evaluator]: [0mInference done 1108/2920. 0.0820 s / img. ETA=0:02:30
+[32m[03/15 13:58:27 d2.evaluation.evaluator]: [0mInference done 1169/2920. 0.0820 s / img. ETA=0:02:25
+[32m[03/15 13:58:32 d2.evaluation.evaluator]: [0mInference done 1230/2920. 0.0819 s / img. ETA=0:02:20
+[32m[03/15 13:58:37 d2.evaluation.evaluator]: [0mInference done 1292/2920. 0.0818 s / img. ETA=0:02:15
+[32m[03/15 13:58:42 d2.evaluation.evaluator]: [0mInference done 1354/2920. 0.0818 s / img. ETA=0:02:09
+[32m[03/15 13:58:47 d2.evaluation.evaluator]: [0mInference done 1415/2920. 0.0818 s / img. ETA=0:02:04
+[32m[03/15 13:58:52 d2.evaluation.evaluator]: [0mInference done 1477/2920. 0.0817 s / img. ETA=0:01:59
+[32m[03/15 13:58:57 d2.evaluation.evaluator]: [0mInference done 1538/2920. 0.0817 s / img. ETA=0:01:54
+[32m[03/15 13:59:02 d2.evaluation.evaluator]: [0mInference done 1599/2920. 0.0817 s / img. ETA=0:01:49
+[32m[03/15 13:59:07 d2.evaluation.evaluator]: [0mInference done 1659/2920. 0.0817 s / img. ETA=0:01:44
+[32m[03/15 13:59:12 d2.evaluation.evaluator]: [0mInference done 1720/2920. 0.0817 s / img. ETA=0:01:39
+[32m[03/15 13:59:17 d2.evaluation.evaluator]: [0mInference done 1782/2920. 0.0816 s / img. ETA=0:01:34
+[32m[03/15 13:59:22 d2.evaluation.evaluator]: [0mInference done 1843/2920. 0.0816 s / img. ETA=0:01:29

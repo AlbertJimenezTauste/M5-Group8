@@ -33,8 +33,7 @@ from detectron2.structures import BoxMode
 classes = { 'Pedestrian': 2, 
             'Car': 1 }
 """
-
-def get_MOTS_dicts(img_dir, seqmap, is_train=True):
+def get_MOTS_dicts(img_dir, seqmap):
 
     # Obtain all the data from the seqmap
     path = '/home/grupo08/datasets/MOTSChallenge/instances_txt/'
@@ -44,16 +43,9 @@ def get_MOTS_dicts(img_dir, seqmap, is_train=True):
     dataset_dicts = []
     for seq in seqmap:
         print(seq)
-        #image_paths = sorted(glob.glob(img_dir + seq + '/*.png'))
-        # For each sequence, use only 70% of the data
         random.seed(42)
         ids = list(objects[seq].keys())
         random.shuffle(ids)
-
-        if(is_train):
-            ids = ids[0:round(0.7*len(ids))]
-        else:
-            ids = ids[(round(0.7*len(ids))+1):-1]
 
         # Iterate through the frames in ids (train or val)
         for i in ids:
@@ -91,24 +83,26 @@ def get_MOTS_dicts(img_dir, seqmap, is_train=True):
     print('Loaded ' + str(np.shape(dataset_dicts)[0]) + ' images!')
     return(dataset_dicts)
 
-
 from detectron2.data import DatasetCatalog, MetadataCatalog
 
 # 0-->None, 1-->Car, 2--->Pedestrian
 class_list =   ['None','Car','Pedestrian']
 # Sequences to load:
-seqmap = ['0002','0005','0009','0011']
+#seqmap = ['0002','0005','0009','0011']
+train_seqmap = ['0002', '0009','0011']
+
+val_seqmap = ['0005']
 
 
 # Create the dataset
 d = "train"
 DatasetCatalog.register("MOTSChallenge_" + d, 
-    lambda d=d: get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", seqmap, is_train=True))
+    lambda d=d: get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", train_seqmap))
 MetadataCatalog.get("MOTSChallenge_" + d).set(thing_classes=class_list)
 
 d = "val"
 DatasetCatalog.register("MOTSChallenge_" + d, 
-    lambda d=d: get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", seqmap, is_train=False))
+    lambda d=d: get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", val_seqmap))
 MetadataCatalog.get("MOTSChallenge_" + d).set(thing_classes=class_list)
 
 MOTS_metadata = MetadataCatalog.get("MOTSChallenge_train")
@@ -118,10 +112,10 @@ print(MOTS_metadata)
 
 
 # Verify it is well loaded
-dataset_dicts = get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", seqmap, is_train=True)
+dataset_dicts = get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", train_seqmap)
 #dataset_dicts_val = get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", seqmap, is_train=False)
 
-"""
+
 ide = 0
 for d in random.sample(dataset_dicts, 10):
     img = cv2.imread(d["file_name"])
@@ -129,7 +123,7 @@ for d in random.sample(dataset_dicts, 10):
     vis = visualizer.draw_dataset_dict(d)
     cv2.imwrite("examples_MOTS/img_"+ str(ide) + ".jpg", vis.get_image()[:, :, ::-1])
     ide += 1
-"""
+
 from detectron2.engine import DefaultTrainer
 from detectron2.config import get_cfg
 
@@ -147,21 +141,21 @@ cfg.SOLVER.MAX_ITER = 5000    # 300 iterations seems good enough for this toy da
 cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 256   # faster, and good enough for this toy dataset (default: 512)
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3  # only has one class (ballon)
 
-"""
+
 os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 trainer = DefaultTrainer(cfg) 
 trainer.resume_or_load(resume=False)
 trainer.train()
-"""
+
 
 cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6   # set the testing threshold for this model
 cfg.DATASETS.TEST = ("MOTSChallenge_val", )
 predictor = DefaultPredictor(cfg)
 
-"""
+
 from detectron2.utils.visualizer import ColorMode
-dataset_dicts = get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", seqmap, is_train=False)
+dataset_dicts = get_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", val_seqmap)
 ide = 0
 for d in random.sample(dataset_dicts, 20):    
     im = cv2.imread(d["file_name"])
@@ -173,7 +167,7 @@ for d in random.sample(dataset_dicts, 20):
     v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
     cv2.imwrite("predicted_MOTS/predicted"+str(ide)+".jpg", v.get_image()[:, :, ::-1])
     ide += 1
-"""
+
 evaluator = COCOEvaluator("MOTSChallenge_val", cfg, False, output_dir=cfg.OUTPUT_DIR)
 val_loader = build_detection_test_loader(cfg, "MOTSChallenge_val")
 inference_on_dataset(predictor.model, val_loader, evaluator)

@@ -1,0 +1,3 @@
+Metadata(name='KITTI_MOTS_train', thing_classes=['None', 'Car', 'Pedestrian'])
+0000
+Loaded 465 images!
