@@ -1,0 +1,98 @@
+Metadata(name='MOTSChallenge_train', thing_classes=['None', 'Car', 'Pedestrian'])
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2004 images!
+[5m[31mWARNING[0m [32m[03/14 22:35:04 d2.evaluation.coco_evaluation]: [0mjson_file was not found in MetaDataCatalog for 'MOTSChallenge_val'. Trying to convert it to COCO format ...
+[32m[03/14 22:35:04 d2.data.datasets.coco]: [0mConverting dataset annotations in 'MOTSChallenge_val' to COCO format ...)
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 850 images!
+[32m[03/14 22:36:05 d2.data.datasets.coco]: [0mConverting dataset dicts into COCO format
+[32m[03/14 22:36:07 d2.data.datasets.coco]: [0mConversion finished, num images: 850, num annotations: 8006
+[32m[03/14 22:36:07 d2.data.datasets.coco]: [0mCaching annotations in COCO format: ./output/MOTSChallenge_val_coco_format.json
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 850 images!
+[32m[03/14 22:37:06 d2.data.build]: [0mDistribution of instances among all 3 categories:
+[36m|  category  | #instances   |  category  | #instances   |  category  | #instances   |
+|:----------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    None    | 0            |    Car     | 0            | Pedestrian | 8006         |
+|            |              |            |              |            |              |
+|   total    | 8006         |            |              |            |              |[0m
+[32m[03/14 22:37:06 d2.data.common]: [0mSerializing 850 elements to byte tensors and concatenating them all ...
+[32m[03/14 22:37:06 d2.data.common]: [0mSerialized dataset takes 0.97 MiB
+[32m[03/14 22:37:06 d2.evaluation.evaluator]: [0mStart inference on 850 images
+[32m[03/14 22:37:08 d2.evaluation.evaluator]: [0mInference done 11/850. 0.1281 s / img. ETA=0:01:48
+[32m[03/14 22:37:13 d2.evaluation.evaluator]: [0mInference done 49/850. 0.1293 s / img. ETA=0:01:45
+[32m[03/14 22:37:18 d2.evaluation.evaluator]: [0mInference done 88/850. 0.1287 s / img. ETA=0:01:39
+[32m[03/14 22:37:23 d2.evaluation.evaluator]: [0mInference done 127/850. 0.1285 s / img. ETA=0:01:34
+[32m[03/14 22:37:28 d2.evaluation.evaluator]: [0mInference done 166/850. 0.1285 s / img. ETA=0:01:29
+[32m[03/14 22:37:33 d2.evaluation.evaluator]: [0mInference done 209/850. 0.1257 s / img. ETA=0:01:21
+[32m[03/14 22:37:38 d2.evaluation.evaluator]: [0mInference done 254/850. 0.1228 s / img. ETA=0:01:14
+[32m[03/14 22:37:43 d2.evaluation.evaluator]: [0mInference done 299/850. 0.1208 s / img. ETA=0:01:07
+[32m[03/14 22:37:48 d2.evaluation.evaluator]: [0mInference done 344/850. 0.1194 s / img. ETA=0:01:01
+[32m[03/14 22:37:54 d2.evaluation.evaluator]: [0mInference done 388/850. 0.1187 s / img. ETA=0:00:55
+[32m[03/14 22:37:59 d2.evaluation.evaluator]: [0mInference done 432/850. 0.1181 s / img. ETA=0:00:50
+[32m[03/14 22:38:04 d2.evaluation.evaluator]: [0mInference done 470/850. 0.1190 s / img. ETA=0:00:45
+[32m[03/14 22:38:09 d2.evaluation.evaluator]: [0mInference done 508/850. 0.1199 s / img. ETA=0:00:41
+[32m[03/14 22:38:14 d2.evaluation.evaluator]: [0mInference done 546/850. 0.1206 s / img. ETA=0:00:37
+[32m[03/14 22:38:19 d2.evaluation.evaluator]: [0mInference done 584/850. 0.1212 s / img. ETA=0:00:32
+[32m[03/14 22:38:24 d2.evaluation.evaluator]: [0mInference done 622/850. 0.1218 s / img. ETA=0:00:28
+[32m[03/14 22:38:29 d2.evaluation.evaluator]: [0mInference done 660/850. 0.1222 s / img. ETA=0:00:23
+[32m[03/14 22:38:34 d2.evaluation.evaluator]: [0mInference done 698/850. 0.1227 s / img. ETA=0:00:18
+[32m[03/14 22:38:39 d2.evaluation.evaluator]: [0mInference done 736/850. 0.1231 s / img. ETA=0:00:14
+[32m[03/14 22:38:44 d2.evaluation.evaluator]: [0mInference done 774/850. 0.1235 s / img. ETA=0:00:09
+[32m[03/14 22:38:49 d2.evaluation.evaluator]: [0mInference done 812/850. 0.1238 s / img. ETA=0:00:04
+[32m[03/14 22:38:54 d2.evaluation.evaluator]: [0mInference done 849/850. 0.1243 s / img. ETA=0:00:00
+[32m[03/14 22:38:54 d2.evaluation.evaluator]: [0mTotal inference time: 0:01:46.674136 (0.126242 s / img per device, on 1 devices)
+[32m[03/14 22:38:54 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:01:44 (0.124256 s / img per device, on 1 devices)
+[32m[03/14 22:38:55 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[03/14 22:38:55 d2.evaluation.coco_evaluation]: [0mSaving results to ./output/coco_instances_results.json
+[32m[03/14 22:38:55 d2.evaluation.coco_evaluation]: [0mEvaluating predictions ...
+Loading and preparing results...
+DONE (t=0.21s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=20.23s).
+Accumulating evaluation results...
+DONE (t=1.45s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.733
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.943
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.819
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.263
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.620
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.802
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.100
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.720
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.783
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.484
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.838
+[32m[03/14 22:39:17 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm   |  APl   |
+|:------:|:------:|:------:|:------:|:------:|:------:|
+| 73.322 | 94.267 | 81.854 | 26.256 | 62.008 | 80.216 |
+[32m[03/14 22:39:17 d2.evaluation.coco_evaluation]: [0mPer-category bbox AP: 
+| category   | AP   | category   | AP   | category   | AP     |
+|:-----------|:-----|:-----------|:-----|:-----------|:-------|
+| None       | nan  | Car        | nan  | Pedestrian | 73.322 |

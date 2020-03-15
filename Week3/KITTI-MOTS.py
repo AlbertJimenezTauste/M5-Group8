@@ -129,11 +129,17 @@ from detectron2.engine import DefaultTrainer
 from detectron2.config import get_cfg
 
 cfg = get_cfg()
-cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
+#CHANGE TO CHOOSE BETWEEN FAST R-CNN OR RETINANET
+#cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
+cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/retinanet_R_101_FPN_3x.yaml"))
+
 cfg.DATASETS.TRAIN = ("KITTI_MOTS_train",)
 cfg.DATASETS.TEST = ("KITTI_MOTS_val",)
 cfg.DATALOADER.NUM_WORKERS = 2
-cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
+#CHANGE TO CHOOSE BETWEEN FAST R-CNN OR RETINANET
+#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
+cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/retinanet_R_101_FPN_3x.yaml")
+
 cfg.SOLVER.IMS_PER_BATCH = 2
 cfg.SOLVER.BASE_LR = 0.00025  # pick a good LR
 cfg.SOLVER.MAX_ITER = 5000    # 300 iterations seems good enough for this toy dataset; you may need to train longer for a practical dataset

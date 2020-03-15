@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "KITTI-MOTS.py", line 171, in <module>
-    evaluator.evaluate()
-  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/evaluation/coco_evaluation.py", line 120, in evaluate
-    predictions = comm.gather(self._predictions, dst=0)
-AttributeError: 'COCOEvaluator' object has no attribute '_predictions'
