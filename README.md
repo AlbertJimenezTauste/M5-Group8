@@ -14,3 +14,6 @@ https://docs.google.com/presentation/d/1Ze_3trDebBxLSfdw3PUJHH0tRaVaXwwQynm0hz-Y
 
 Link to our Google Slides presentation for week 2:
 https://docs.google.com/presentation/d/1c4xtNZq7lIeD_czr5CbuHrxFa0WB6DYtZoJ2jGCYuqI/edit?usp=sharing
+
+Link to our Google Slides presentation for week 3:
+https://docs.google.com/presentation/d/1x6bG69pYLy2ihXuBFTyGefpW86UNyczkbqTA6J5z1FE/edit?usp=sharing
