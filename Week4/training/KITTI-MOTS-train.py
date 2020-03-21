@@ -34,6 +34,13 @@ classes = { 'Pedestrian': 2,
             'Car': 1 }
 """
 
+
+# Mode selection
+# 0 detection with class mapping
+# 1 detection without class mapping
+# 2 segmentation
+MODE = 2
+
 def get_KITTI_MOTS_dicts(img_dir, seqmap):
 
     # Obtain all the data from the seqmap
@@ -56,9 +63,11 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
             record["image_id"] = seq + str(i)
             record["height"] = objects[seq][i][0].mask['size'][0]
             record["width"] = objects[seq][i][0].mask['size'][1]
+            #record["sem_seg_file_name"] = img_dir + seq + '/mask_' + f'{i:06}' +'.png'
 
             # Iterate through all the instances in the i-th frame for sequence seq
             objs = []
+            obj_num = 0
             for instance in objects[seq][i]:
                 # class_id=10 means ignore instance
                 if(instance.class_id==10):
@@ -71,15 +80,72 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
                 tl = [np.min(pos[0]), np.min(pos[1])]
                 br = [np.max(pos[0]), np.max(pos[1])]
 
-                obj = {
-                    "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
-                    "bbox_mode": BoxMode.XYXY_ABS,
-                    "category_id": instance.class_id,  #0 if instance.class_id == 2 else 2,
-                    "iscrowd": 0,
-                    "segmentation": instance.mask
-                }
-                objs.append(obj)
+                if MODE == 0:
+                    obj = {
+                        "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
+                        "bbox_mode": BoxMode.XYXY_ABS,
+                        "category_id": instance.class_id
+                    }
 
+                elif MODE == 1:
+                    obj = {
+                        "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
+                        "bbox_mode": BoxMode.XYXY_ABS,
+                        "category_id": instance.class_id
+                    }
+                elif MODE == 2:
+                    # Create segmentation data
+                    contours, hierarchy = cv2.findContours((mask).astype(np.uint8), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+                   
+                    segmentation = []
+
+                    for contour in contours:
+                        if contour.size >= 6:
+                            segmentation.append(contour.flatten().tolist())
+                   
+                    RLEs = rletools.frPyObjects(segmentation, mask.shape[0], mask.shape[1])
+                    RLE = rletools.merge(RLEs)
+                    # RLE = rletools.encode(np.asfortranarray(mask))
+                    area = rletools.area(RLE)
+                    [x, y, w, h] = cv2.boundingRect(mask)
+
+                    '''
+                    if mask is not None:
+                        p_mask = cv2.cvtColor(mask, cv2.COLOR_RGB2BGR)
+                        cv2.drawContours(p_mask, contours, -1, (0,255,0), 1)
+                        cv2.rectangle(p_mask,(x,y),(x+w,y+h), (255,0,0), 2)
+                        cv2.imwrite("../" + short_model_name + "/masks/mask_" + str(i) + ".jpg", p_mask)
+                    '''
+                    obj = {
+                        "segmentation": segmentation,  # poly
+                        "area": area,  # segmentation area
+                        "iscrowd" : 0,
+                        "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
+                        "bbox_mode": BoxMode.XYXY_ABS,
+                        "category_id": instance.class_id,
+                        "id": obj_num
+                    }
+
+                    obj_num = obj_num+1
+
+                elif MODE == 3:
+                    obj = {
+                        "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
+                        "bbox_mode": BoxMode.XYXY_ABS,
+                        "category_id": instance.class_id,
+                        "segmentation": rletools.encode(np.asarray(mask, order="F"))
+                    }
+
+                elif MODE == 4:
+                    obj = {
+                        "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
+                        "bbox_mode": BoxMode.XYXY_ABS,
+                        "category_id": instance.class_id,
+                        "iscrowd": 0,
+                        "segmentation": instance.mask
+                    }
+    
+                objs.append(obj)
             record["annotations"] = objs
             dataset_dicts.append(record)
     
@@ -127,7 +193,7 @@ from detectron2.config import get_cfg
 
 cfg = get_cfg()
 
-model_name = "COCO-InstanceSegmentation/mask_rcnn_R_50_C4_1x.yaml"
+model_name = 'COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml'
 short_model_name = model_name.split("/")
 short_model_name = short_model_name[1]
 short_model_name = short_model_name[:-5]
