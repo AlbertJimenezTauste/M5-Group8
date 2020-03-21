@@ -1,0 +1,45 @@
+Metadata(name='KITTI_MOTS_train', thing_classes=['None', 'Car', 'Pedestrian'])
+Loading sequence 0000
+Loading sequence 0001
+Loading sequence 0003
+Loading sequence 0004
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+Loading sequence 0012
+Loading sequence 0015
+Loading sequence 0017
+Loading sequence 0019
+Loading sequence 0020
+0000
+0001
+0003
+0004
+0005
+0009
+0011
+0012
+0015
+0017
+0019
+0020
+Loaded 5007 images!
+Loading sequence 0002
+Loading sequence 0006
+Loading sequence 0007
+Loading sequence 0008
+Loading sequence 0010
+Loading sequence 0013
+Loading sequence 0014
+Loading sequence 0016
+Loading sequence 0018
+0002
+0006
+0007
+0008
+0010
+0013
+0014
+0016
+0018
+Loaded 2920 images!

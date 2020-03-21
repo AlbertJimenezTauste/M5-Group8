@@ -89,7 +89,7 @@ from detectron2.data import DatasetCatalog, MetadataCatalog
 class_list =   ['None','Car','Pedestrian']
 # Sequences to load:
 #seqmap = ['0002','0005','0009','0011']
-train_seqmap = ['0002', '0009','0011']
+train_seqmap = ['0002','0009','0011']
 
 val_seqmap = ['0005']
 
@@ -128,28 +128,29 @@ from detectron2.engine import DefaultTrainer
 from detectron2.config import get_cfg
 
 cfg = get_cfg()
-cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
-#cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/retinanet_R_101_FPN_3x.yaml"))
+#cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
+cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/retinanet_R_101_FPN_3x.yaml"))
 cfg.DATASETS.TRAIN = ("MOTSChallenge_train",)
 cfg.DATASETS.TEST = ("MOTSChallenge_val",)
 cfg.DATALOADER.NUM_WORKERS = 2
-cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
-#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/retinanet_R_101_FPN_3x.yaml")
+#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")  # Let training initialize from model zoo
+cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/retinanet_R_101_FPN_3x.yaml")
 cfg.SOLVER.IMS_PER_BATCH = 2
 cfg.SOLVER.BASE_LR = 0.00025  # pick a good LR
 cfg.SOLVER.MAX_ITER = 5000    # 300 iterations seems good enough for this toy dataset; you may need to train longer for a practical dataset
 cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 256   # faster, and good enough for this toy dataset (default: 512)
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3  # only has one class (ballon)
 
-
+"""
 os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 trainer = DefaultTrainer(cfg) 
 trainer.resume_or_load(resume=False)
 trainer.train()
-
+"""
 
 cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6   # set the testing threshold for this model
+cfg.MODEL.RETINANET.SCORE_THRESH_TEST = 0.6 # to be effective in RetinaNet
 cfg.DATASETS.TEST = ("MOTSChallenge_val", )
 predictor = DefaultPredictor(cfg)
 
@@ -168,6 +169,8 @@ for d in random.sample(dataset_dicts, 20):
     cv2.imwrite("predicted_MOTS/predicted"+str(ide)+".jpg", v.get_image()[:, :, ::-1])
     ide += 1
 
+"""
 evaluator = COCOEvaluator("MOTSChallenge_val", cfg, False, output_dir=cfg.OUTPUT_DIR)
 val_loader = build_detection_test_loader(cfg, "MOTSChallenge_val")
 inference_on_dataset(predictor.model, val_loader, evaluator)
+"""

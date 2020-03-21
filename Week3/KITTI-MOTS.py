@@ -149,10 +149,11 @@ trainer.train()
 
 cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_final.pth")
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6   # set the testing threshold for this model
+cfg.MODEL.RETINANET.SCORE_THRESH_TEST = 0.6 # to be effective in RetinaNet
 cfg.DATASETS.TEST = ("KITTI_MOTS_val", )
 predictor = DefaultPredictor(cfg)
 
-"""
+
 from detectron2.utils.visualizer import ColorMode
 dataset_dicts = get_KITTI_MOTS_dicts("/home/mcv/datasets/KITTI-MOTS/training/image_02/", val_seqmap)
 ide = 0
@@ -166,8 +167,9 @@ for d in random.sample(dataset_dicts, 20):
     v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
     cv2.imwrite("predicted/predicted"+str(ide)+".jpg", v.get_image()[:, :, ::-1])
     ide += 1
-"""
 
+"""
 evaluator = COCOEvaluator("KITTI_MOTS_val", cfg, False, output_dir=cfg.OUTPUT_DIR)
 val_loader = build_detection_test_loader(cfg, "KITTI_MOTS_val")
 inference_on_dataset(predictor.model, val_loader, evaluator)
+"""

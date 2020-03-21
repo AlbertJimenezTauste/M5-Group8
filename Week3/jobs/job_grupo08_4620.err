@@ -1,0 +1,11 @@
+Loading config /home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/model_zoo/configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_load. Your machine may be at risk if the file contains malicious content.
+Traceback (most recent call last):
+  File "MOTSChallenge.py", line 167, in <module>
+    v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 337, in draw_instance_predictions
+    labels = _create_text_labels(classes, scores, self.metadata.get("thing_classes", None))
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 201, in _create_text_labels
+    labels = [class_names[i] for i in classes]
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 201, in <listcomp>
+    labels = [class_names[i] for i in classes]
+IndexError: list index out of range

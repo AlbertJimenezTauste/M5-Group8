@@ -1,0 +1,11 @@
+Metadata(name='MOTSChallenge_train', thing_classes=['None', 'Car', 'Pedestrian'])
+Loading sequence 0002
+Loading sequence 0009
+Loading sequence 0011
+0002
+0009
+0011
+Loaded 2025 images!
+Loading sequence 0005
+0005
+Loaded 837 images!
