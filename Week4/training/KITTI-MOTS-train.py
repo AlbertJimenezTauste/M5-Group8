@@ -80,7 +80,7 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
                 tl = [np.min(pos[0]), np.min(pos[1])]
                 br = [np.max(pos[0]), np.max(pos[1])]
 
-                if mask is None: continue
+                print(mask.shape)
 
                 if MODE == 0:
                     obj = {
