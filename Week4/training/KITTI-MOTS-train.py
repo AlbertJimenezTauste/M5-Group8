@@ -103,7 +103,7 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
                         if contour.size >= 6:
                             segmentation.append(contour.flatten().tolist())
 
-                    print(segmentation)
+                    if segmentation == []: continue
 
                     RLEs = rletools.frPyObjects(segmentation, mask.shape[0], mask.shape[1])
                     RLE = rletools.merge(RLEs)
