@@ -80,6 +80,9 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
                 tl = [np.min(pos[0]), np.min(pos[1])]
                 br = [np.max(pos[0]), np.max(pos[1])]
 
+                if mask is None: continue
+                if not mask: continue
+
                 if MODE == 0:
                     obj = {
                         "bbox": [np.min(pos[1]), np.min(pos[0]), np.max(pos[1]), np.max(pos[0])],
@@ -102,7 +105,7 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
                     for contour in contours:
                         if contour.size >= 6:
                             segmentation.append(contour.flatten().tolist())
-                   
+
                     RLEs = rletools.frPyObjects(segmentation, mask.shape[0], mask.shape[1])
                     RLE = rletools.merge(RLEs)
                     # RLE = rletools.encode(np.asfortranarray(mask))
