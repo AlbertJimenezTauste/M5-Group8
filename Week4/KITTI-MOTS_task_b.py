@@ -158,7 +158,6 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
 
 # MODEL
 # ----------------------------------------------------------------------------
-
 models_COCO = ['COCO-InstanceSegmentation/mask_rcnn_R_101_C4_3x.yaml', 'COCO-InstanceSegmentation/mask_rcnn_R_101_DC5_3x.yaml', 
 'COCO-InstanceSegmentation/mask_rcnn_R_101_FPN_3x.yaml', 'COCO-InstanceSegmentation/mask_rcnn_R_50_C4_1x.yaml',
 'COCO-InstanceSegmentation/mask_rcnn_R_50_C4_3x.yaml', 'COCO-InstanceSegmentation/mask_rcnn_R_50_DC5_1x.yaml', 
