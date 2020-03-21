@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "./KITTI-MOTS-train.py", line 184, in <module>
+    dataset_dicts = get_KITTI_MOTS_dicts("/home/mcv/datasets/KITTI-MOTS/training/image_02/", train_seqmap)
+  File "./KITTI-MOTS-train.py", line 84, in get_KITTI_MOTS_dicts
+    if not mask: continue
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

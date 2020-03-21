@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "./KITTI-MOTS-train.py", line 183, in <module>
+    dataset_dicts = get_KITTI_MOTS_dicts("/home/mcv/datasets/KITTI-MOTS/training/image_02/", train_seqmap)
+  File "./KITTI-MOTS-train.py", line 108, in get_KITTI_MOTS_dicts
+    RLEs = rletools.frPyObjects(segmentation, mask.shape[0], mask.shape[1])
+  File "pycocotools/_mask.pyx", line 292, in pycocotools._mask.frPyObjects
+IndexError: list index out of range

@@ -157,6 +157,16 @@ def get_KITTI_MOTS_dicts(img_dir, seqmap):
 
 from detectron2.data import DatasetCatalog, MetadataCatalog
 
+model_name = 'COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml'
+short_model_name = model_name.split("/")
+short_model_name = short_model_name[1]
+short_model_name = short_model_name[:-5]
+
+os.makedirs("../" + short_model_name + "/ground_truth", exist_ok=True)
+os.makedirs("../" + short_model_name + "/masks", exist_ok=True)
+os.makedirs("../" + short_model_name + "/inference", exist_ok=True)
+os.makedirs("../" + short_model_name + "/output", exist_ok=True)
+
 # 0-->None, 1-->Car, 2--->Pedestrian
 class_list =   ['None','Car','Pedestrian']
 # Sequences to load:
@@ -186,7 +196,7 @@ for d in random.sample(dataset_dicts, 2):
     img = cv2.imread(d["file_name"])
     visualizer = Visualizer(img[:, :, ::-1], metadata=KITTI_metadata, scale=0.5)
     vis = visualizer.draw_dataset_dict(d)
-    cv2.imwrite("img_"+str(ide)+".jpg", vis.get_image()[:, :, ::-1])
+    cv2.imwrite("../" + short_model_name + "/ground_truth/gt_img_"+str(ide)+".jpg", vis.get_image()[:, :, ::-1])
     ide += 1
 
 from detectron2.engine import DefaultTrainer
@@ -195,18 +205,13 @@ from detectron2.config import get_cfg
 
 cfg = get_cfg()
 
-model_name = 'COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml'
-short_model_name = model_name.split("/")
-short_model_name = short_model_name[1]
-short_model_name = short_model_name[:-5]
 
-os.makedirs("../gt_" + short_model_name, exist_ok=True)
-os.makedirs("../mask_" + short_model_name, exist_ok=True)
-os.makedirs("../inference_" + short_model_name, exist_ok=True)
 
 cfg.merge_from_file(model_zoo.get_config_file(model_name))
 cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url(model_name)  # Let training initialize from model zoo
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6   # set the testing threshold for this model
+
+cfg.OUTPUT_DIR = "../" + short_model_name + "/output"
 
 cfg.DATASETS.TRAIN = ("KITTI_MOTS_train",)
 cfg.DATASETS.TEST = ("KITTI_MOTS_val",)
@@ -219,7 +224,6 @@ cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 256
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3  
 
 cfg.INPUT.MASK_FORMAT='bitmask'
-
 
 os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 trainer = DefaultTrainer(cfg) 
@@ -245,7 +249,7 @@ for d in random.sample(dataset_dicts, 20):
                     scale=0.8
     )
     v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
-    cv2.imwrite("predicted/predicted"+str(ide)+".jpg", v.get_image()[:, :, ::-1])
+    cv2.imwrite("../" + short_model_name + "/inference/predicted"+str(ide)+".jpg", v.get_image()[:, :, ::-1])
     ide += 1
 
 
