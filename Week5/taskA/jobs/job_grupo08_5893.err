@@ -1,0 +1,21 @@
+'proposal_generator.anchor_generator.cell_anchors.0' has shape (3, 4) in the checkpoint but (15, 4) in the model! Skipped.
+'proposal_generator.rpn_head.conv.weight' has shape (256, 256, 3, 3) in the checkpoint but (1024, 1024, 3, 3) in the model! Skipped.
+'proposal_generator.rpn_head.conv.bias' has shape (256,) in the checkpoint but (1024,) in the model! Skipped.
+'proposal_generator.rpn_head.objectness_logits.weight' has shape (3, 256, 1, 1) in the checkpoint but (15, 1024, 1, 1) in the model! Skipped.
+'proposal_generator.rpn_head.objectness_logits.bias' has shape (3,) in the checkpoint but (15,) in the model! Skipped.
+'proposal_generator.rpn_head.anchor_deltas.weight' has shape (12, 256, 1, 1) in the checkpoint but (60, 1024, 1, 1) in the model! Skipped.
+'proposal_generator.rpn_head.anchor_deltas.bias' has shape (12,) in the checkpoint but (60,) in the model! Skipped.
+'roi_heads.box_predictor.cls_score.weight' has shape (4, 1024) in the checkpoint but (81, 2048) in the model! Skipped.
+'roi_heads.box_predictor.cls_score.bias' has shape (4,) in the checkpoint but (81,) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.weight' has shape (12, 1024) in the checkpoint but (320, 2048) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.bias' has shape (12,) in the checkpoint but (320,) in the model! Skipped.
+Traceback (most recent call last):
+  File "../KITTI-MOTS-evaluate.py", line 221, in <module>
+    v = v.draw_instance_predictions(outputs["instances"].to("cpu"))
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 337, in draw_instance_predictions
+    labels = _create_text_labels(classes, scores, self.metadata.get("thing_classes", None))
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 201, in _create_text_labels
+    labels = [class_names[i] for i in classes]
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/utils/visualizer.py", line 201, in <listcomp>
+    labels = [class_names[i] for i in classes]
+IndexError: list index out of range

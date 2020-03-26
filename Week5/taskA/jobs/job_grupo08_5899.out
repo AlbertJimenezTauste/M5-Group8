@@ -1,0 +1,104 @@
+Metadata(name='MOTSChallenge_val', thing_classes=['None', 'Car', 'Pedestrian'])
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+../mask_rcnn_R_50_FPN_3x_MOTS/output/model_final.pth
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+[5m[31mWARNING[0m [32m[03/26 12:15:06 d2.evaluation.coco_evaluation]: [0mjson_file was not found in MetaDataCatalog for 'MOTSChallenge_val'. Trying to convert it to COCO format ...
+[5m[31mWARNING[0m [32m[03/26 12:15:06 d2.data.datasets.coco]: [0mUsing previously cached COCO format annotations at '../mask_rcnn_R_50_FPN_3x_MOTS/output/MOTSChallenge_val_coco_format.json'. You need to clear the cache file if your dataset has been modified.
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+[32m[03/26 12:24:49 d2.data.build]: [0mDistribution of instances among all 3 categories:
+[36m|  category  | #instances   |  category  | #instances   |  category  | #instances   |
+|:----------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    None    | 0            |    Car     | 0            | Pedestrian | 26892        |
+|            |              |            |              |            |              |
+|   total    | 26892        |            |              |            |              |[0m
+[32m[03/26 12:24:49 d2.data.common]: [0mSerializing 2862 elements to byte tensors and concatenating them all ...
+[32m[03/26 12:24:51 d2.data.common]: [0mSerialized dataset takes 57.16 MiB
+[32m[03/26 12:24:51 d2.evaluation.evaluator]: [0mStart inference on 2862 images
+[32m[03/26 12:24:53 d2.evaluation.evaluator]: [0mInference done 11/2862. 0.0434 s / img. ETA=0:02:44
+[32m[03/26 12:24:58 d2.evaluation.evaluator]: [0mInference done 98/2862. 0.0465 s / img. ETA=0:02:42
+[32m[03/26 12:25:03 d2.evaluation.evaluator]: [0mInference done 184/2862. 0.0454 s / img. ETA=0:02:37
+[32m[03/26 12:25:08 d2.evaluation.evaluator]: [0mInference done 269/2862. 0.0451 s / img. ETA=0:02:32
+[32m[03/26 12:25:13 d2.evaluation.evaluator]: [0mInference done 355/2862. 0.0454 s / img. ETA=0:02:27
+[32m[03/26 12:25:18 d2.evaluation.evaluator]: [0mInference done 437/2862. 0.0454 s / img. ETA=0:02:23
+[32m[03/26 12:25:23 d2.evaluation.evaluator]: [0mInference done 521/2862. 0.0454 s / img. ETA=0:02:18
+[32m[03/26 12:25:28 d2.evaluation.evaluator]: [0mInference done 611/2862. 0.0453 s / img. ETA=0:02:12
+[32m[03/26 12:25:33 d2.evaluation.evaluator]: [0mInference done 755/2862. 0.0431 s / img. ETA=0:01:54
+[32m[03/26 12:25:38 d2.evaluation.evaluator]: [0mInference done 898/2862. 0.0416 s / img. ETA=0:01:40
+[32m[03/26 12:25:43 d2.evaluation.evaluator]: [0mInference done 1044/2862. 0.0404 s / img. ETA=0:01:28
+[32m[03/26 12:25:48 d2.evaluation.evaluator]: [0mInference done 1188/2862. 0.0396 s / img. ETA=0:01:18
+[32m[03/26 12:25:53 d2.evaluation.evaluator]: [0mInference done 1331/2862. 0.0390 s / img. ETA=0:01:10
+[32m[03/26 12:25:58 d2.evaluation.evaluator]: [0mInference done 1456/2862. 0.0388 s / img. ETA=0:01:03
+[32m[03/26 12:26:03 d2.evaluation.evaluator]: [0mInference done 1543/2862. 0.0392 s / img. ETA=0:01:00
+[32m[03/26 12:26:08 d2.evaluation.evaluator]: [0mInference done 1629/2862. 0.0395 s / img. ETA=0:00:57
+[32m[03/26 12:26:13 d2.evaluation.evaluator]: [0mInference done 1715/2862. 0.0399 s / img. ETA=0:00:54
+[32m[03/26 12:26:18 d2.evaluation.evaluator]: [0mInference done 1799/2862. 0.0401 s / img. ETA=0:00:50
+[32m[03/26 12:26:23 d2.evaluation.evaluator]: [0mInference done 1881/2862. 0.0404 s / img. ETA=0:00:47
+[32m[03/26 12:26:28 d2.evaluation.evaluator]: [0mInference done 1967/2862. 0.0407 s / img. ETA=0:00:43
+[32m[03/26 12:26:33 d2.evaluation.evaluator]: [0mInference done 2052/2862. 0.0410 s / img. ETA=0:00:39
+[32m[03/26 12:26:38 d2.evaluation.evaluator]: [0mInference done 2137/2862. 0.0412 s / img. ETA=0:00:36
+[32m[03/26 12:26:43 d2.evaluation.evaluator]: [0mInference done 2221/2862. 0.0414 s / img. ETA=0:00:32
+[32m[03/26 12:26:49 d2.evaluation.evaluator]: [0mInference done 2309/2862. 0.0416 s / img. ETA=0:00:27
+[32m[03/26 12:26:54 d2.evaluation.evaluator]: [0mInference done 2395/2862. 0.0418 s / img. ETA=0:00:23
+[32m[03/26 12:26:59 d2.evaluation.evaluator]: [0mInference done 2482/2862. 0.0420 s / img. ETA=0:00:19
+[32m[03/26 12:27:04 d2.evaluation.evaluator]: [0mInference done 2567/2862. 0.0422 s / img. ETA=0:00:15
+[32m[03/26 12:27:09 d2.evaluation.evaluator]: [0mInference done 2653/2862. 0.0424 s / img. ETA=0:00:10
+[32m[03/26 12:27:14 d2.evaluation.evaluator]: [0mInference done 2737/2862. 0.0425 s / img. ETA=0:00:06
+[32m[03/26 12:27:19 d2.evaluation.evaluator]: [0mInference done 2822/2862. 0.0427 s / img. ETA=0:00:02
+[32m[03/26 12:27:22 d2.evaluation.evaluator]: [0mTotal inference time: 0:02:29.141493 (0.052202 s / img per device, on 1 devices)
+[32m[03/26 12:27:22 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:02:01 (0.042677 s / img per device, on 1 devices)
+[32m[03/26 12:27:22 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[03/26 12:27:22 d2.evaluation.coco_evaluation]: [0mSaving results to ../mask_rcnn_R_50_FPN_3x_MOTS/output/coco_instances_results.json
+[32m[03/26 12:27:22 d2.evaluation.coco_evaluation]: [0mEvaluating predictions ...
+Loading and preparing results...
+DONE (t=0.00s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=125.21s).
+Accumulating evaluation results...
+DONE (t=0.24s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.000
+[32m[03/26 12:29:27 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|  AP   |  AP50  |  AP75  |  APs  |  APm  |  APl  |
+|:-----:|:------:|:------:|:-----:|:-----:|:-----:|
+| 0.000 | 0.000  | 0.000  | 0.000 | 0.000 | 0.000 |
+[32m[03/26 12:29:27 d2.evaluation.coco_evaluation]: [0mPer-category bbox AP: 
+| category   | AP   | category   | AP   | category   | AP    |
+|:-----------|:-----|:-----------|:-----|:-----------|:------|
+| None       | nan  | Car        | nan  | Pedestrian | 0.000 |

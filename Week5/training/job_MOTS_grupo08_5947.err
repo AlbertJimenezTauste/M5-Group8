@@ -1,0 +1,6 @@
+'roi_heads.box_predictor.cls_score.weight' has shape (9, 1024) in the checkpoint but (4, 1024) in the model! Skipped.
+'roi_heads.box_predictor.cls_score.bias' has shape (9,) in the checkpoint but (4,) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.weight' has shape (32, 1024) in the checkpoint but (12, 1024) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.bias' has shape (32,) in the checkpoint but (12,) in the model! Skipped.
+'roi_heads.mask_head.predictor.weight' has shape (8, 256, 1, 1) in the checkpoint but (3, 256, 1, 1) in the model! Skipped.
+'roi_heads.mask_head.predictor.bias' has shape (8,) in the checkpoint but (3,) in the model! Skipped.
