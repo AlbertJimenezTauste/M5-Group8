@@ -20,3 +20,6 @@ https://docs.google.com/presentation/d/1x6bG69pYLy2ihXuBFTyGefpW86UNyczkbqTA6J5z
 
 Link to our Google Slides presentation for week 4:
 https://docs.google.com/presentation/d/1BjhwWVJrHJwEfNrjIv_ZCEf59QdWLQBjb2oc-SHSETk/edit?usp=sharing
+
+Link to our Google Slides presentation for week 5:
+https://docs.google.com/presentation/d/1LLA2eHpLzL2vysEAPV-oae_uy-09UerktQm4O-ilWKo/edit?usp=sharing
