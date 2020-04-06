@@ -166,10 +166,13 @@ def get_dicts(img_dir, seqmap, dataset):
 from detectron2.data import DatasetCatalog, MetadataCatalog
 
 #COCO
+#Best model
 #model_name = 'COCO-InstanceSegmentation/mask_rcnn_X_101_32x8d_FPN_3x.yaml' 
+#Model that make sense to compare with others
+model_name = 'COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml'
 
 #COCO + CITYSCAPES
-model_name = 'Cityscapes/mask_rcnn_R_50_FPN.yaml'
+#model_name = 'Cityscapes/mask_rcnn_R_50_FPN.yaml'
 
 short_model_name = model_name.split("/")
 short_model_name = short_model_name[1]

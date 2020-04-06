@@ -1,0 +1,14 @@
+'roi_heads.box_predictor.cls_score.weight' has shape (9, 1024) in the checkpoint but (4, 1024) in the model! Skipped.
+'roi_heads.box_predictor.cls_score.bias' has shape (9,) in the checkpoint but (4,) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.weight' has shape (32, 1024) in the checkpoint but (12, 1024) in the model! Skipped.
+'roi_heads.box_predictor.bbox_pred.bias' has shape (32,) in the checkpoint but (12,) in the model! Skipped.
+'roi_heads.mask_head.predictor.weight' has shape (8, 256, 1, 1) in the checkpoint but (3, 256, 1, 1) in the model! Skipped.
+'roi_heads.mask_head.predictor.bias' has shape (8,) in the checkpoint but (3,) in the model! Skipped.
+Traceback (most recent call last):
+  File "../KITTI-MOTS-train-taskb.py", line 260, in <module>
+    dataset_dicts = get_KITTI_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", val_seqmap, path = path)
+  File "../KITTI-MOTS-train-taskb.py", line 47, in get_KITTI_MOTS_dicts
+    objects = io.load_sequences(path, seqmap)
+  File "/home/grupo08/M5-Group8/Week5/taskB/load_things.py", line 26, in load_sequences
+    assert False, "Can't find data in directory " + path
+AssertionError: Can't find data in directory /home/mcv/datasets/MOTSChallenge/train/instances_txt/

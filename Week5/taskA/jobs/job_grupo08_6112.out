@@ -1,0 +1,392 @@
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+/home/mcv/datasets/MOTSChallenge/train/images/0009/000111.jpg
+/home/mcv/datasets/MOTSChallenge/train/images/0009/000026.jpg
+[5m[31mWARNING[0m [32m[03/27 18:26:34 d2.evaluation.coco_evaluation]: [0mjson_file was not found in MetaDataCatalog for 'MOTSChallenge_val'. Trying to convert it to COCO format ...
+[32m[03/27 18:26:34 d2.data.datasets.coco]: [0mConverting annotations of dataset 'MOTSChallenge_val' to COCO format ...)
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+[32m[03/27 18:34:25 d2.data.datasets.coco]: [0mConverting dataset dicts into COCO format
+[32m[03/27 18:34:35 d2.data.datasets.coco]: [0mConversion finished, num images: 2862, num annotations: 26892
+[32m[03/27 18:34:38 d2.data.datasets.coco]: [0mCaching COCO format annotations at '../mask_rcnn_R_50_FPN_NOT_TRAINED/output/MOTSChallenge_val_coco_format.json' ...
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+[32m[03/27 18:46:03 d2.data.build]: [0mDistribution of instances among all 8 categories:
+[36m|  category  | #instances   |  category  | #instances   |  category  | #instances   |
+|:----------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|   person   | 26892        |   rider    | 0            |    car     | 0            |
+|   truck    | 0            |    bus     | 0            |   train    | 0            |
+| motorcycle | 0            |  bicycle   | 0            |            |              |
+|   total    | 26892        |            |              |            |              |[0m
+[32m[03/27 18:46:03 d2.data.common]: [0mSerializing 2862 elements to byte tensors and concatenating them all ...
+[32m[03/27 18:46:04 d2.data.common]: [0mSerialized dataset takes 57.16 MiB
+[32m[03/27 18:46:04 d2.evaluation.evaluator]: [0mStart inference on 2862 images
+[32m[03/27 18:46:08 d2.evaluation.evaluator]: [0mInference done 11/2862. 0.1326 s / img. ETA=0:11:47
+[32m[03/27 18:46:13 d2.evaluation.evaluator]: [0mInference done 29/2862. 0.1323 s / img. ETA=0:13:14
+[32m[03/27 18:46:18 d2.evaluation.evaluator]: [0mInference done 47/2862. 0.1325 s / img. ETA=0:13:18
+[32m[03/27 18:46:23 d2.evaluation.evaluator]: [0mInference done 65/2862. 0.1328 s / img. ETA=0:13:12
+[32m[03/27 18:46:29 d2.evaluation.evaluator]: [0mInference done 84/2862. 0.1325 s / img. ETA=0:12:57
+[32m[03/27 18:46:34 d2.evaluation.evaluator]: [0mInference done 103/2862. 0.1324 s / img. ETA=0:12:48
+[32m[03/27 18:46:39 d2.evaluation.evaluator]: [0mInference done 123/2862. 0.1319 s / img. ETA=0:12:35
+[32m[03/27 18:46:44 d2.evaluation.evaluator]: [0mInference done 143/2862. 0.1316 s / img. ETA=0:12:24
+[32m[03/27 18:46:49 d2.evaluation.evaluator]: [0mInference done 162/2862. 0.1315 s / img. ETA=0:12:17
+[32m[03/27 18:46:55 d2.evaluation.evaluator]: [0mInference done 181/2862. 0.1315 s / img. ETA=0:12:12
+[32m[03/27 18:47:00 d2.evaluation.evaluator]: [0mInference done 199/2862. 0.1315 s / img. ETA=0:12:09
+[32m[03/27 18:47:05 d2.evaluation.evaluator]: [0mInference done 218/2862. 0.1315 s / img. ETA=0:12:04
+[32m[03/27 18:47:10 d2.evaluation.evaluator]: [0mInference done 237/2862. 0.1315 s / img. ETA=0:11:58
+[32m[03/27 18:47:15 d2.evaluation.evaluator]: [0mInference done 257/2862. 0.1316 s / img. ETA=0:11:51
+[32m[03/27 18:47:20 d2.evaluation.evaluator]: [0mInference done 276/2862. 0.1317 s / img. ETA=0:11:45
+[32m[03/27 18:47:26 d2.evaluation.evaluator]: [0mInference done 294/2862. 0.1318 s / img. ETA=0:11:42
+[32m[03/27 18:47:31 d2.evaluation.evaluator]: [0mInference done 313/2862. 0.1319 s / img. ETA=0:11:37
+[32m[03/27 18:47:36 d2.evaluation.evaluator]: [0mInference done 331/2862. 0.1320 s / img. ETA=0:11:34
+[32m[03/27 18:47:41 d2.evaluation.evaluator]: [0mInference done 349/2862. 0.1321 s / img. ETA=0:11:29
+[32m[03/27 18:47:46 d2.evaluation.evaluator]: [0mInference done 368/2862. 0.1321 s / img. ETA=0:11:24
+[32m[03/27 18:47:51 d2.evaluation.evaluator]: [0mInference done 386/2862. 0.1322 s / img. ETA=0:11:20
+[32m[03/27 18:47:56 d2.evaluation.evaluator]: [0mInference done 404/2862. 0.1322 s / img. ETA=0:11:16
+[32m[03/27 18:48:01 d2.evaluation.evaluator]: [0mInference done 422/2862. 0.1323 s / img. ETA=0:11:12
+[32m[03/27 18:48:07 d2.evaluation.evaluator]: [0mInference done 441/2862. 0.1323 s / img. ETA=0:11:07
+[32m[03/27 18:48:12 d2.evaluation.evaluator]: [0mInference done 459/2862. 0.1323 s / img. ETA=0:11:02
+[32m[03/27 18:48:17 d2.evaluation.evaluator]: [0mInference done 477/2862. 0.1325 s / img. ETA=0:10:59
+[32m[03/27 18:48:22 d2.evaluation.evaluator]: [0mInference done 496/2862. 0.1325 s / img. ETA=0:10:53
+[32m[03/27 18:48:27 d2.evaluation.evaluator]: [0mInference done 515/2862. 0.1325 s / img. ETA=0:10:48
+[32m[03/27 18:48:32 d2.evaluation.evaluator]: [0mInference done 532/2862. 0.1326 s / img. ETA=0:10:45
+[32m[03/27 18:49:45 d2.evaluation.evaluator]: [0mInference done 539/2862. 0.2655 s / img. ETA=0:15:52
+[32m[03/27 18:49:51 d2.evaluation.evaluator]: [0mInference done 554/2862. 0.2627 s / img. ETA=0:15:41
+[32m[03/27 18:49:56 d2.evaluation.evaluator]: [0mInference done 573/2862. 0.2583 s / img. ETA=0:15:24
+[32m[03/27 18:50:01 d2.evaluation.evaluator]: [0mInference done 592/2862. 0.2542 s / img. ETA=0:15:06
+[32m[03/27 18:50:06 d2.evaluation.evaluator]: [0mInference done 627/2862. 0.2457 s / img. ETA=0:14:20
+[32m[03/27 18:50:11 d2.evaluation.evaluator]: [0mInference done 676/2862. 0.2349 s / img. ETA=0:13:16
+[32m[03/27 18:50:16 d2.evaluation.evaluator]: [0mInference done 725/2862. 0.2255 s / img. ETA=0:12:20
+[32m[03/27 18:50:21 d2.evaluation.evaluator]: [0mInference done 774/2862. 0.2173 s / img. ETA=0:11:31
+[32m[03/27 18:50:26 d2.evaluation.evaluator]: [0mInference done 823/2862. 0.2102 s / img. ETA=0:10:47
+[32m[03/27 18:50:31 d2.evaluation.evaluator]: [0mInference done 872/2862. 0.2038 s / img. ETA=0:10:07
+[32m[03/27 18:50:36 d2.evaluation.evaluator]: [0mInference done 921/2862. 0.1981 s / img. ETA=0:09:32
+[32m[03/27 18:50:41 d2.evaluation.evaluator]: [0mInference done 970/2862. 0.1930 s / img. ETA=0:08:59
+[32m[03/27 18:50:47 d2.evaluation.evaluator]: [0mInference done 1018/2862. 0.1885 s / img. ETA=0:08:29
+[32m[03/27 18:50:52 d2.evaluation.evaluator]: [0mInference done 1066/2862. 0.1845 s / img. ETA=0:08:02
+[32m[03/27 18:50:57 d2.evaluation.evaluator]: [0mInference done 1112/2862. 0.1811 s / img. ETA=0:07:38
+[32m[03/27 18:51:02 d2.evaluation.evaluator]: [0mInference done 1159/2862. 0.1779 s / img. ETA=0:07:15
+[32m[03/27 18:51:07 d2.evaluation.evaluator]: [0mInference done 1207/2862. 0.1747 s / img. ETA=0:06:53
+[32m[03/27 18:51:12 d2.evaluation.evaluator]: [0mInference done 1255/2862. 0.1718 s / img. ETA=0:06:32
+[32m[03/27 18:51:17 d2.evaluation.evaluator]: [0mInference done 1303/2862. 0.1691 s / img. ETA=0:06:12
+[32m[03/27 18:51:22 d2.evaluation.evaluator]: [0mInference done 1351/2862. 0.1666 s / img. ETA=0:05:54
+[32m[03/27 18:51:27 d2.evaluation.evaluator]: [0mInference done 1399/2862. 0.1643 s / img. ETA=0:05:36
+[32m[03/27 18:51:32 d2.evaluation.evaluator]: [0mInference done 1440/2862. 0.1626 s / img. ETA=0:05:22
+[32m[03/27 18:51:38 d2.evaluation.evaluator]: [0mInference done 1467/2862. 0.1621 s / img. ETA=0:05:15
+[32m[03/27 18:51:43 d2.evaluation.evaluator]: [0mInference done 1495/2862. 0.1615 s / img. ETA=0:05:08
+[32m[03/27 18:51:48 d2.evaluation.evaluator]: [0mInference done 1522/2862. 0.1611 s / img. ETA=0:05:01
+[32m[03/27 18:51:53 d2.evaluation.evaluator]: [0mInference done 1548/2862. 0.1607 s / img. ETA=0:04:54
+[32m[03/27 18:51:58 d2.evaluation.evaluator]: [0mInference done 1576/2862. 0.1601 s / img. ETA=0:04:47
+[32m[03/27 18:52:03 d2.evaluation.evaluator]: [0mInference done 1603/2862. 0.1597 s / img. ETA=0:04:40
+[32m[03/27 18:52:08 d2.evaluation.evaluator]: [0mInference done 1630/2862. 0.1593 s / img. ETA=0:04:34
+[32m[03/27 18:52:13 d2.evaluation.evaluator]: [0mInference done 1658/2862. 0.1588 s / img. ETA=0:04:27
+[32m[03/27 18:52:18 d2.evaluation.evaluator]: [0mInference done 1686/2862. 0.1583 s / img. ETA=0:04:20
+[32m[03/27 18:52:24 d2.evaluation.evaluator]: [0mInference done 1714/2862. 0.1579 s / img. ETA=0:04:13
+[32m[03/27 18:52:29 d2.evaluation.evaluator]: [0mInference done 1741/2862. 0.1575 s / img. ETA=0:04:06
+[32m[03/27 18:52:34 d2.evaluation.evaluator]: [0mInference done 1769/2862. 0.1571 s / img. ETA=0:03:59
+[32m[03/27 18:52:39 d2.evaluation.evaluator]: [0mInference done 1796/2862. 0.1567 s / img. ETA=0:03:53
+[32m[03/27 18:52:44 d2.evaluation.evaluator]: [0mInference done 1823/2862. 0.1564 s / img. ETA=0:03:47
+[32m[03/27 18:52:49 d2.evaluation.evaluator]: [0mInference done 1850/2862. 0.1561 s / img. ETA=0:03:40
+[32m[03/27 18:52:54 d2.evaluation.evaluator]: [0mInference done 1877/2862. 0.1557 s / img. ETA=0:03:34
+[32m[03/27 18:52:59 d2.evaluation.evaluator]: [0mInference done 1904/2862. 0.1554 s / img. ETA=0:03:28
+[32m[03/27 18:53:04 d2.evaluation.evaluator]: [0mInference done 1932/2862. 0.1551 s / img. ETA=0:03:21
+[32m[03/27 18:53:09 d2.evaluation.evaluator]: [0mInference done 1959/2862. 0.1548 s / img. ETA=0:03:15
+[32m[03/27 18:53:14 d2.evaluation.evaluator]: [0mInference done 1986/2862. 0.1544 s / img. ETA=0:03:09
+[32m[03/27 18:53:19 d2.evaluation.evaluator]: [0mInference done 2012/2862. 0.1541 s / img. ETA=0:03:03
+[32m[03/27 18:53:25 d2.evaluation.evaluator]: [0mInference done 2038/2862. 0.1538 s / img. ETA=0:02:57
+[32m[03/27 18:53:30 d2.evaluation.evaluator]: [0mInference done 2062/2862. 0.1536 s / img. ETA=0:02:52
+[32m[03/27 18:53:35 d2.evaluation.evaluator]: [0mInference done 2087/2862. 0.1534 s / img. ETA=0:02:46
+[32m[03/27 18:53:40 d2.evaluation.evaluator]: [0mInference done 2113/2862. 0.1531 s / img. ETA=0:02:41
+[32m[03/27 18:53:45 d2.evaluation.evaluator]: [0mInference done 2138/2862. 0.1528 s / img. ETA=0:02:35
+[32m[03/27 18:53:50 d2.evaluation.evaluator]: [0mInference done 2163/2862. 0.1526 s / img. ETA=0:02:30
+[32m[03/27 18:53:55 d2.evaluation.evaluator]: [0mInference done 2189/2862. 0.1524 s / img. ETA=0:02:24
+[32m[03/27 18:54:00 d2.evaluation.evaluator]: [0mInference done 2214/2862. 0.1522 s / img. ETA=0:02:19
+[32m[03/27 18:54:06 d2.evaluation.evaluator]: [0mInference done 2240/2862. 0.1519 s / img. ETA=0:02:13
+[32m[03/27 18:54:11 d2.evaluation.evaluator]: [0mInference done 2264/2862. 0.1518 s / img. ETA=0:02:08
+[32m[03/27 18:54:16 d2.evaluation.evaluator]: [0mInference done 2289/2862. 0.1515 s / img. ETA=0:02:02
+[32m[03/27 18:54:21 d2.evaluation.evaluator]: [0mInference done 2315/2862. 0.1513 s / img. ETA=0:01:57
+[32m[03/27 18:54:26 d2.evaluation.evaluator]: [0mInference done 2341/2862. 0.1511 s / img. ETA=0:01:51
+[32m[03/27 18:54:31 d2.evaluation.evaluator]: [0mInference done 2367/2862. 0.1509 s / img. ETA=0:01:45
+[32m[03/27 18:54:36 d2.evaluation.evaluator]: [0mInference done 2393/2862. 0.1507 s / img. ETA=0:01:40
+[32m[03/27 18:54:41 d2.evaluation.evaluator]: [0mInference done 2419/2862. 0.1505 s / img. ETA=0:01:34
+[32m[03/27 18:54:46 d2.evaluation.evaluator]: [0mInference done 2445/2862. 0.1503 s / img. ETA=0:01:28
+[32m[03/27 18:54:51 d2.evaluation.evaluator]: [0mInference done 2470/2862. 0.1501 s / img. ETA=0:01:23
+[32m[03/27 18:54:56 d2.evaluation.evaluator]: [0mInference done 2495/2862. 0.1499 s / img. ETA=0:01:18
+[32m[03/27 18:55:01 d2.evaluation.evaluator]: [0mInference done 2520/2862. 0.1498 s / img. ETA=0:01:12
+[32m[03/27 18:55:07 d2.evaluation.evaluator]: [0mInference done 2546/2862. 0.1496 s / img. ETA=0:01:07
+[32m[03/27 18:55:12 d2.evaluation.evaluator]: [0mInference done 2571/2862. 0.1494 s / img. ETA=0:01:01
+[32m[03/27 18:55:17 d2.evaluation.evaluator]: [0mInference done 2596/2862. 0.1492 s / img. ETA=0:00:56
+[32m[03/27 18:55:22 d2.evaluation.evaluator]: [0mInference done 2621/2862. 0.1491 s / img. ETA=0:00:51
+[32m[03/27 18:55:27 d2.evaluation.evaluator]: [0mInference done 2647/2862. 0.1489 s / img. ETA=0:00:45
+[32m[03/27 18:55:32 d2.evaluation.evaluator]: [0mInference done 2673/2862. 0.1487 s / img. ETA=0:00:40
+[32m[03/27 18:55:37 d2.evaluation.evaluator]: [0mInference done 2698/2862. 0.1486 s / img. ETA=0:00:34
+[32m[03/27 18:55:42 d2.evaluation.evaluator]: [0mInference done 2723/2862. 0.1484 s / img. ETA=0:00:29
+[32m[03/27 18:55:47 d2.evaluation.evaluator]: [0mInference done 2748/2862. 0.1483 s / img. ETA=0:00:24
+[32m[03/27 18:55:53 d2.evaluation.evaluator]: [0mInference done 2774/2862. 0.1481 s / img. ETA=0:00:18
+[32m[03/27 18:55:58 d2.evaluation.evaluator]: [0mInference done 2799/2862. 0.1480 s / img. ETA=0:00:13
+[32m[03/27 18:56:03 d2.evaluation.evaluator]: [0mInference done 2825/2862. 0.1478 s / img. ETA=0:00:07
+[32m[03/27 18:56:08 d2.evaluation.evaluator]: [0mInference done 2850/2862. 0.1477 s / img. ETA=0:00:02
+[32m[03/27 18:56:10 d2.evaluation.evaluator]: [0mTotal inference time: 0:10:03.733737 (0.211317 s / img per device, on 1 devices)
+[32m[03/27 18:56:10 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:07:01 (0.147580 s / img per device, on 1 devices)
+[32m[03/27 18:56:11 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[03/27 18:56:11 d2.evaluation.coco_evaluation]: [0mSaving results to ../mask_rcnn_R_50_FPN_NOT_TRAINED/output/coco_instances_results.json
+[32m[03/27 18:56:11 d2.evaluation.coco_evaluation]: [0mEvaluating predictions ...
+Loading and preparing results...
+DONE (t=0.05s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=104.55s).
+Accumulating evaluation results...
+DONE (t=1.17s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.740
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.555
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.092
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.403
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.647
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.085
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.535
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.186
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.718
+[32m[03/27 18:57:57 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
+|:------:|:------:|:------:|:-----:|:------:|:------:|
+| 49.139 | 74.025 | 55.497 | 9.193 | 40.261 | 64.738 |
+[32m[03/27 18:57:57 d2.evaluation.coco_evaluation]: [0mPer-category bbox AP: 
+| category   | AP     | category   | AP   | category   | AP   |
+|:-----------|:-------|:-----------|:-----|:-----------|:-----|
+| person     | 49.139 | rider      | nan  | car        | nan  |
+| truck      | nan    | bus        | nan  | train      | nan  |
+| motorcycle | nan    | bicycle    | nan  |            |      |
+Loading and preparing results...
+DONE (t=0.71s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=73.68s).
+Accumulating evaluation results...
+DONE (t=1.51s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.382
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.701
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.366
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.040
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.292
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.072
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.134
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.378
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.609
+[32m[03/27 19:00:28 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs  |  APm   |  APl   |
+|:------:|:------:|:------:|:-----:|:------:|:------:|
+| 38.198 | 70.052 | 36.555 | 4.039 | 29.218 | 52.620 |
+[32m[03/27 19:00:28 d2.evaluation.coco_evaluation]: [0mPer-category segm AP: 
+| category   | AP     | category   | AP   | category   | AP   |
+|:-----------|:-------|:-----------|:-----|:-----------|:-----|
+| person     | 38.198 | rider      | nan  | car        | nan  |
+| truck      | nan    | bus        | nan  | train      | nan  |
+| motorcycle | nan    | bicycle    | nan  |            |      |
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+/home/mcv/datasets/MOTSChallenge/train/images/0009/000111.jpg
+/home/mcv/datasets/MOTSChallenge/train/images/0009/000026.jpg
+Loading sequence 0002
+Loading sequence 0005
+Loading sequence 0009
+Loading sequence 0011
+0002
+0005
+0009
+0011
+Loaded 2862 images!
+[32m[03/27 19:21:47 d2.data.common]: [0mSerializing 2862 elements to byte tensors and concatenating them all ...
+[32m[03/27 19:21:58 d2.data.common]: [0mSerialized dataset takes 57.16 MiB
+[32m[03/27 19:21:58 d2.evaluation.evaluator]: [0mStart inference on 2862 images
+[32m[03/27 19:22:03 d2.evaluation.evaluator]: [0mInference done 11/2862. 0.0988 s / img. ETA=0:13:09
+[32m[03/27 19:22:08 d2.evaluation.evaluator]: [0mInference done 30/2862. 0.0999 s / img. ETA=0:12:59
+[32m[03/27 19:22:13 d2.evaluation.evaluator]: [0mInference done 49/2862. 0.0996 s / img. ETA=0:12:55
+[32m[03/27 19:22:18 d2.evaluation.evaluator]: [0mInference done 68/2862. 0.0988 s / img. ETA=0:12:43
+[32m[03/27 19:22:23 d2.evaluation.evaluator]: [0mInference done 88/2862. 0.0984 s / img. ETA=0:12:27
+[32m[03/27 19:22:28 d2.evaluation.evaluator]: [0mInference done 107/2862. 0.0979 s / img. ETA=0:12:19
+[32m[03/27 19:22:33 d2.evaluation.evaluator]: [0mInference done 129/2862. 0.0971 s / img. ETA=0:11:57
+[32m[03/27 19:22:39 d2.evaluation.evaluator]: [0mInference done 150/2862. 0.0966 s / img. ETA=0:11:44
+[32m[03/27 19:22:44 d2.evaluation.evaluator]: [0mInference done 172/2862. 0.0960 s / img. ETA=0:11:30
+[32m[03/27 19:22:49 d2.evaluation.evaluator]: [0mInference done 194/2862. 0.0955 s / img. ETA=0:11:17
+[32m[03/27 19:22:54 d2.evaluation.evaluator]: [0mInference done 215/2862. 0.0953 s / img. ETA=0:11:07
+[32m[03/27 19:22:59 d2.evaluation.evaluator]: [0mInference done 237/2862. 0.0949 s / img. ETA=0:10:56
+[32m[03/27 19:23:04 d2.evaluation.evaluator]: [0mInference done 258/2862. 0.0948 s / img. ETA=0:10:48
+[32m[03/27 19:23:09 d2.evaluation.evaluator]: [0mInference done 279/2862. 0.0946 s / img. ETA=0:10:41
+[32m[03/27 19:23:14 d2.evaluation.evaluator]: [0mInference done 300/2862. 0.0944 s / img. ETA=0:10:34
+[32m[03/27 19:23:19 d2.evaluation.evaluator]: [0mInference done 322/2862. 0.0943 s / img. ETA=0:10:26
+[32m[03/27 19:23:24 d2.evaluation.evaluator]: [0mInference done 343/2862. 0.0941 s / img. ETA=0:10:20
+[32m[03/27 19:23:29 d2.evaluation.evaluator]: [0mInference done 365/2862. 0.0940 s / img. ETA=0:10:13
+[32m[03/27 19:23:35 d2.evaluation.evaluator]: [0mInference done 386/2862. 0.0940 s / img. ETA=0:10:09
+[32m[03/27 19:23:40 d2.evaluation.evaluator]: [0mInference done 407/2862. 0.0940 s / img. ETA=0:10:03
+[32m[03/27 19:23:45 d2.evaluation.evaluator]: [0mInference done 428/2862. 0.0940 s / img. ETA=0:09:57
+[32m[03/27 19:23:50 d2.evaluation.evaluator]: [0mInference done 449/2862. 0.0940 s / img. ETA=0:09:52
+[32m[03/27 19:23:55 d2.evaluation.evaluator]: [0mInference done 470/2862. 0.0939 s / img. ETA=0:09:46
+[32m[03/27 19:24:00 d2.evaluation.evaluator]: [0mInference done 491/2862. 0.0939 s / img. ETA=0:09:41
+[32m[03/27 19:24:05 d2.evaluation.evaluator]: [0mInference done 513/2862. 0.0939 s / img. ETA=0:09:34
+[32m[03/27 19:24:10 d2.evaluation.evaluator]: [0mInference done 534/2862. 0.0939 s / img. ETA=0:09:29
+[32m[03/27 19:24:16 d2.evaluation.evaluator]: [0mInference done 556/2862. 0.0938 s / img. ETA=0:09:23
+[32m[03/27 19:24:21 d2.evaluation.evaluator]: [0mInference done 578/2862. 0.0938 s / img. ETA=0:09:17
+[32m[03/27 19:24:26 d2.evaluation.evaluator]: [0mInference done 600/2862. 0.0938 s / img. ETA=0:09:10
+[32m[03/27 19:24:31 d2.evaluation.evaluator]: [0mInference done 662/2862. 0.0918 s / img. ETA=0:08:22
+[32m[03/27 19:24:36 d2.evaluation.evaluator]: [0mInference done 724/2862. 0.0901 s / img. ETA=0:07:40
+[32m[03/27 19:24:41 d2.evaluation.evaluator]: [0mInference done 786/2862. 0.0886 s / img. ETA=0:07:05
+[32m[03/27 19:24:46 d2.evaluation.evaluator]: [0mInference done 848/2862. 0.0874 s / img. ETA=0:06:34
+[32m[03/27 19:24:51 d2.evaluation.evaluator]: [0mInference done 908/2862. 0.0866 s / img. ETA=0:06:08
+[32m[03/27 19:24:56 d2.evaluation.evaluator]: [0mInference done 968/2862. 0.0859 s / img. ETA=0:05:44
+[32m[03/27 19:25:01 d2.evaluation.evaluator]: [0mInference done 1029/2862. 0.0851 s / img. ETA=0:05:22
+[32m[03/27 19:25:06 d2.evaluation.evaluator]: [0mInference done 1088/2862. 0.0846 s / img. ETA=0:05:03
+[32m[03/27 19:25:11 d2.evaluation.evaluator]: [0mInference done 1150/2862. 0.0840 s / img. ETA=0:04:44
+[32m[03/27 19:25:16 d2.evaluation.evaluator]: [0mInference done 1211/2862. 0.0835 s / img. ETA=0:04:27
+[32m[03/27 19:25:21 d2.evaluation.evaluator]: [0mInference done 1271/2862. 0.0831 s / img. ETA=0:04:11
+[32m[03/27 19:25:26 d2.evaluation.evaluator]: [0mInference done 1331/2862. 0.0827 s / img. ETA=0:03:57
+[32m[03/27 19:25:31 d2.evaluation.evaluator]: [0mInference done 1392/2862. 0.0823 s / img. ETA=0:03:43
+[32m[03/27 19:25:36 d2.evaluation.evaluator]: [0mInference done 1445/2862. 0.0821 s / img. ETA=0:03:32
+[32m[03/27 19:25:42 d2.evaluation.evaluator]: [0mInference done 1476/2862. 0.0824 s / img. ETA=0:03:27
+[32m[03/27 19:27:18 d2.evaluation.evaluator]: [0mInference done 1504/2862. 0.1435 s / img. ETA=0:04:46
+[32m[03/27 19:27:23 d2.evaluation.evaluator]: [0mInference done 1526/2862. 0.1434 s / img. ETA=0:04:42
+[32m[03/27 19:27:28 d2.evaluation.evaluator]: [0mInference done 1556/2862. 0.1424 s / img. ETA=0:04:35
+[32m[03/27 19:27:33 d2.evaluation.evaluator]: [0mInference done 1586/2862. 0.1414 s / img. ETA=0:04:28
+[32m[03/27 19:27:38 d2.evaluation.evaluator]: [0mInference done 1618/2862. 0.1403 s / img. ETA=0:04:20
+[32m[03/27 19:27:43 d2.evaluation.evaluator]: [0mInference done 1649/2862. 0.1393 s / img. ETA=0:04:12
+[32m[03/27 19:27:48 d2.evaluation.evaluator]: [0mInference done 1680/2862. 0.1383 s / img. ETA=0:04:05
+[32m[03/27 19:27:53 d2.evaluation.evaluator]: [0mInference done 1712/2862. 0.1374 s / img. ETA=0:03:57
+[32m[03/27 19:27:58 d2.evaluation.evaluator]: [0mInference done 1742/2862. 0.1365 s / img. ETA=0:03:50
+[32m[03/27 19:28:04 d2.evaluation.evaluator]: [0mInference done 1773/2862. 0.1356 s / img. ETA=0:03:43
+[32m[03/27 19:28:09 d2.evaluation.evaluator]: [0mInference done 1805/2862. 0.1348 s / img. ETA=0:03:35
+[32m[03/27 19:28:14 d2.evaluation.evaluator]: [0mInference done 1837/2862. 0.1339 s / img. ETA=0:03:28
+[32m[03/27 19:28:19 d2.evaluation.evaluator]: [0mInference done 1870/2862. 0.1331 s / img. ETA=0:03:20
+[32m[03/27 19:28:24 d2.evaluation.evaluator]: [0mInference done 1903/2862. 0.1322 s / img. ETA=0:03:13
+[32m[03/27 19:28:29 d2.evaluation.evaluator]: [0mInference done 1920/2862. 0.1328 s / img. ETA=0:03:10
+[32m[03/27 19:28:34 d2.evaluation.evaluator]: [0mInference done 1947/2862. 0.1322 s / img. ETA=0:03:05
+[32m[03/27 19:28:39 d2.evaluation.evaluator]: [0mInference done 1981/2862. 0.1314 s / img. ETA=0:02:57
+[32m[03/27 19:28:44 d2.evaluation.evaluator]: [0mInference done 2017/2862. 0.1306 s / img. ETA=0:02:49
+[32m[03/27 19:28:49 d2.evaluation.evaluator]: [0mInference done 2052/2862. 0.1298 s / img. ETA=0:02:41
+[32m[03/27 19:28:55 d2.evaluation.evaluator]: [0mInference done 2087/2862. 0.1291 s / img. ETA=0:02:33
+[32m[03/27 19:29:00 d2.evaluation.evaluator]: [0mInference done 2123/2862. 0.1284 s / img. ETA=0:02:26
+[32m[03/27 19:29:05 d2.evaluation.evaluator]: [0mInference done 2158/2862. 0.1277 s / img. ETA=0:02:18
+[32m[03/27 19:29:10 d2.evaluation.evaluator]: [0mInference done 2193/2862. 0.1270 s / img. ETA=0:02:11
+[32m[03/27 19:29:15 d2.evaluation.evaluator]: [0mInference done 2226/2862. 0.1264 s / img. ETA=0:02:04
+[32m[03/27 19:29:20 d2.evaluation.evaluator]: [0mInference done 2261/2862. 0.1258 s / img. ETA=0:01:56
+[32m[03/27 19:29:25 d2.evaluation.evaluator]: [0mInference done 2297/2862. 0.1252 s / img. ETA=0:01:49
+[32m[03/27 19:29:30 d2.evaluation.evaluator]: [0mInference done 2333/2862. 0.1246 s / img. ETA=0:01:42
+[32m[03/27 19:29:35 d2.evaluation.evaluator]: [0mInference done 2367/2862. 0.1240 s / img. ETA=0:01:35
+[32m[03/27 19:29:40 d2.evaluation.evaluator]: [0mInference done 2403/2862. 0.1235 s / img. ETA=0:01:27
+[32m[03/27 19:29:45 d2.evaluation.evaluator]: [0mInference done 2416/2862. 0.1233 s / img. ETA=0:01:25
+[32m[03/27 19:29:51 d2.evaluation.evaluator]: [0mInference done 2453/2862. 0.1228 s / img. ETA=0:01:18
+[32m[03/27 19:29:56 d2.evaluation.evaluator]: [0mInference done 2488/2862. 0.1223 s / img. ETA=0:01:11
+[32m[03/27 19:30:01 d2.evaluation.evaluator]: [0mInference done 2522/2862. 0.1218 s / img. ETA=0:01:04
+[32m[03/27 19:30:06 d2.evaluation.evaluator]: [0mInference done 2558/2862. 0.1213 s / img. ETA=0:00:57
+[32m[03/27 19:30:11 d2.evaluation.evaluator]: [0mInference done 2592/2862. 0.1209 s / img. ETA=0:00:51
+[32m[03/27 19:30:16 d2.evaluation.evaluator]: [0mInference done 2626/2862. 0.1204 s / img. ETA=0:00:44
+[32m[03/27 19:30:21 d2.evaluation.evaluator]: [0mInference done 2662/2862. 0.1200 s / img. ETA=0:00:37
+[32m[03/27 19:30:26 d2.evaluation.evaluator]: [0mInference done 2697/2862. 0.1195 s / img. ETA=0:00:30
+[32m[03/27 19:30:31 d2.evaluation.evaluator]: [0mInference done 2731/2862. 0.1191 s / img. ETA=0:00:24
+[32m[03/27 19:30:36 d2.evaluation.evaluator]: [0mInference done 2766/2862. 0.1187 s / img. ETA=0:00:17
+[32m[03/27 19:30:41 d2.evaluation.evaluator]: [0mInference done 2801/2862. 0.1183 s / img. ETA=0:00:11
+[32m[03/27 19:30:46 d2.evaluation.evaluator]: [0mInference done 2835/2862. 0.1180 s / img. ETA=0:00:05
+[32m[03/27 19:30:51 d2.evaluation.evaluator]: [0mTotal inference time: 0:08:50.050025 (0.185527 s / img per device, on 1 devices)
+[32m[03/27 19:30:51 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:05:36 (0.117688 s / img per device, on 1 devices)
+[32m[03/27 19:30:52 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[03/27 19:30:52 d2.evaluation.coco_evaluation]: [0mSaving results to ../mask_rcnn_R_50_FPN_3x_NOT_TRAINED/output/coco_instances_results.json
+[32m[03/27 19:30:53 d2.evaluation.coco_evaluation]: [0mEvaluating predictions ...
+Loading and preparing results...
+DONE (t=0.21s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=99.07s).
+Accumulating evaluation results...
+DONE (t=1.28s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.808
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.702
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.171
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.470
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.796
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.096
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.616
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.647
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.212
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.536
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.836
+[32m[03/27 19:32:34 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm   |  APl   |
+|:------:|:------:|:------:|:------:|:------:|:------:|
+| 60.564 | 80.764 | 70.191 | 17.124 | 46.998 | 79.631 |
+[32m[03/27 19:32:34 d2.evaluation.coco_evaluation]: [0mPer-category bbox AP: 
+| category   | AP     | category   | AP   | category   | AP   |
+|:-----------|:-------|:-----------|:-----|:-----------|:-----|
+| person     | 60.564 | rider      | nan  | car        | nan  |
+| truck      | nan    | bus        | nan  | train      | nan  |
+| motorcycle | nan    | bicycle    | nan  |            |      |
+Loading and preparing results...
+DONE (t=1.69s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *segm*
+DONE (t=127.22s).
+Accumulating evaluation results...
+DONE (t=1.26s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.796
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.110
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.365
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.711
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.087
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.543
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.570
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.166
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.451
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.754
+[32m[03/27 19:36:19 d2.evaluation.coco_evaluation]: [0mEvaluation results for segm: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm   |  APl   |
+|:------:|:------:|:------:|:------:|:------:|:------:|
+| 52.352 | 79.636 | 59.001 | 10.979 | 36.461 | 71.148 |
+[32m[03/27 19:36:19 d2.evaluation.coco_evaluation]: [0mPer-category segm AP: 
+| category   | AP     | category   | AP   | category   | AP   |
+|:-----------|:-------|:-----------|:-----|:-----------|:-----|
+| person     | 52.352 | rider      | nan  | car        | nan  |
+| truck      | nan    | bus        | nan  | train      | nan  |
+| motorcycle | nan    | bicycle    | nan  |            |      |

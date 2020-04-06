@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "../KITTI-MOTS-eval-MOTS.py", line 197, in <module>
+    lambda d=d: get_KITTI_MOTS_dicts("/home/mcv/datasets/MOTSChallenge/train/images/", val_seqmap, path = path))
+  File "/home/grupo08/anaconda3/lib/python3.7/site-packages/detectron2/data/catalog.py", line 39, in register
+    name
+AssertionError: Dataset 'MOTSChallenge_val' is already registered!
