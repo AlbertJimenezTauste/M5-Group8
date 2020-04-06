@@ -2,7 +2,7 @@
 
 Project by Group 8:
 - Albert Jiménez: albert.jimenez.tauste@gmail.com
-- Arnau Roche: arnauroche@gmail.com
+- Arnau Roche: arnau.roche@gmail.com
 - Eloi Bové: eloibove@gmail.com
 - Jordi Burgués: jordiburguesm@gmail.com
 
@@ -20,3 +20,6 @@ https://docs.google.com/presentation/d/1x6bG69pYLy2ihXuBFTyGefpW86UNyczkbqTA6J5z
 
 Link to our Google Slides presentation for week 4:
 https://docs.google.com/presentation/d/1BjhwWVJrHJwEfNrjIv_ZCEf59QdWLQBjb2oc-SHSETk/edit?usp=sharing
+
+Link to our Google Slides presentation for week 5:
+https://docs.google.com/presentation/d/1LLA2eHpLzL2vysEAPV-oae_uy-09UerktQm4O-ilWKo/edit?usp=sharing
