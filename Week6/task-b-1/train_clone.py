@@ -33,6 +33,8 @@ from detectron2.config import get_cfg
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.utils.visualizer import ColorMode
 
+from read_dicts import get_vKITTI_dicts, get_KITTI_MOTS_dicts
+
 # Custom trainer class
 class Trainer(DefaultTrainer):
     @classmethod
@@ -56,7 +58,7 @@ short_model_name = short_model_name[1]
 short_model_name = short_model_name[:-5]
 
 
-d = "train_real_" + str(p)
+d = "train_real"
 DatasetCatalog.register("KITTI_MOTS_" + d, 
     lambda d=d: get_KITTI_MOTS_dicts("/home/mcv/datasets/KITTI-MOTS/training/image_02/", train_seqmap))
 MetadataCatalog.get("KITTI_MOTS_" + d).set(thing_classes=class_list)
@@ -101,11 +103,11 @@ for elem in ('first', 'second', 'third'):
         cfg.DATASETS.TRAIN = ("KITTI_MOTS_train_real", "KITTI_MOTS_train_clone",)
 
     cfg.DATASETS.TEST = ("KITTI_MOTS_val",)
-    cfg.TEST.EVAL_PERIOD = 800
+    cfg.TEST.EVAL_PERIOD = 400
     cfg.DATALOADER.NUM_WORKERS = 2
     cfg.SOLVER.IMS_PER_BATCH = 2
     cfg.SOLVER.BASE_LR = 0.00025 
-    cfg.SOLVER.MAX_ITER = 8000    
+    cfg.SOLVER.MAX_ITER = 4000    
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 256  
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = 3  
     cfg.INPUT.MASK_FORMAT='bitmask'

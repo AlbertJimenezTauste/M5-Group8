@@ -82,7 +82,7 @@ def get_vKITTI_dicts(dataset_dir):
                 RLE = rletools.merge(RLEs)
                 area = rletools.area(RLE)
                 [x, y, w, h] = cv2.boundingRect(mask)
-
+                print(obj_id // 1000)
                 obj = {
                     "segmentation": segmentation,  # poly
                     "area": area,  # segmentation area
